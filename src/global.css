@@ -1,0 +1,78 @@
+.input-text-styles{
+    height: 40px;
+    width: 90%;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #19212C;
+    padding-left: 3%;
+}
+
+.label-type{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #868B90; 
+    margin-bottom: 2%;
+}
+
+.radio-btn-cont{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    color: #868B90; 
+    margin-top: 4%;
+}
+
+
+.sign-button{
+    height: 50px;
+    width: 90%;
+    background: #4424A7;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.error-message-text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 10px;
+    color: red; 
+}
+
+.global-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-inp-style{
+    height: "20px"; 
+    width: "30px";
+    cursor: "pointer" 
+}

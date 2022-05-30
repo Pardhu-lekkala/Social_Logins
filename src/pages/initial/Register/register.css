@@ -1,0 +1,6 @@
+.reg-main-cont{
+    height: 115vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
