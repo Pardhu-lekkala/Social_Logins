@@ -100,6 +100,11 @@ const userReducer = (state = initialState, action) => {
       };
 
     case types.GOOGLE_LOGIN_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        currentUser: action.payload,
+      };
     case types.TWITTER_LOGIN_SUCCESS:
     case types.FACEBOOK_LOGIN_SUCCESS:
     case types.APPLE_LOGIN_SUCCESS:

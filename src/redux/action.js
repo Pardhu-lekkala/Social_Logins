@@ -362,8 +362,8 @@ export const googleLoginInitiate = () => {
     });
     signInWithPopup(auth, provider)
       .then(({ user }) => {
+        console.log(user, "user in action");
         dispatch(googleLoginSuccess(user.email));
-        console.log(user.email, "user in action");
       })
       .catch((error) => {
         dispatch(googleLoginFail(error.message));
