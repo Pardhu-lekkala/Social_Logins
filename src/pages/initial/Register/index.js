@@ -74,7 +74,7 @@ const Register = () => {
             className="top-logo-cont"
             //style={{ height: "20%", width: "30%" }}
           >
-            <img src={brandLogo} />
+            <img src={brandLogo} style={{ height: 100, width: 100 }} />
           </div>
           <div className="top-header-cont">
             <img src={logo} />
@@ -88,7 +88,7 @@ const Register = () => {
               className="label-type"
               style={{ marginTop: "10%" }}
             >
-              Email address
+              Email Address
             </label>
             <input
               type="text"
@@ -133,8 +133,18 @@ const Register = () => {
               onChange={(e) => setState({ ...state, password: e.target.value })}
             />
           </div>
-          <div style={{ marginTop: "15px" }}>
-            <button className="sign-button" onClick={userRegister}>
+          <div
+            style={{
+              marginTop: "15px",
+              width: "95%",
+              marginLeft: "4%",
+            }}
+          >
+            <button
+              className="sign-button"
+              //style={{ marginRight: "0 !important", width: "75% !important" }}
+              onClick={userRegister}
+            >
               {loading === false ? (
                 "Register"
               ) : (
@@ -175,6 +185,11 @@ const Register = () => {
             </div>
           </div>
           {email === "" && password === "" && buttonClick === true && (
+            <p className="error-message-text">
+              {APPLICATION_CONSTANTS.ERROR_EMAIL_STRING}
+            </p>
+          )}
+          {email === "" && password !== "" && buttonClick === true && (
             <p className="error-message-text">
               {APPLICATION_CONSTANTS.ERROR_EMAIL_STRING}
             </p>

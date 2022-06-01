@@ -58,8 +58,8 @@ const ForgotPassword = (props) => {
     <div className="login-main-cont">
       <div className="sign-up-cont">
         <div className="sign-logo-cont">
-          <div className="top-logo-cont">
-            <img src={brandLogo} />
+          <div className="top-logo-cont" style={{ marginTop: "80%" }}>
+            <img src={brandLogo} style={{ height: 100, width: 100 }} />
           </div>
           <div className="top-header-cont">
             <img src={logo} />
@@ -76,7 +76,7 @@ const ForgotPassword = (props) => {
               and we will send you a password reset link to your email address.
             </p>
           </div>
-          <div className="input-cont" style={{ marginLeft: "35px" }}>
+          <div className="input-cont" style={{ marginLeft: "10%" }}>
             <label
               htmlFor="email"
               className="label-type"

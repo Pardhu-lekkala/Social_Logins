@@ -20,7 +20,7 @@
     font-size: 20px;
     line-height: 22px;
     color: #868B90; 
-    margin-bottom: 2%;
+    margin-bottom: 3.5%;
 }
 
 .radio-btn-cont{
@@ -41,8 +41,8 @@
 
 
 .sign-button{
-    height: 50px;
-    width: 90%;
+    height: 40px;
+    width: 82%;
     background: #4424A7;
     border-radius: 8px;
     font-family: 'Inter';
@@ -53,6 +53,8 @@
     color: #FFFFFF;
     border-width: 0px;
     cursor: pointer;
+    margin-top: 10px;
+    margin-right: 4%;
 }
 
 .error-message-text{

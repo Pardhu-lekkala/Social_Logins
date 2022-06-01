@@ -367,7 +367,9 @@ export const googleLoginInitiate = () => {
       })
       .catch((error) => {
         dispatch(googleLoginFail(error.message));
-        Swal.fire("Error", `${error.message}`, "error");
+        if (error.message !== "Firebase: Error (auth/popup-closed-by-user).") {
+          Swal.fire("Error", `${error.message}`, "error");
+        }
         console.log(error.message, "err msg");
       });
   };
@@ -387,7 +389,9 @@ export const twitterLoginInitiate = () => {
       })
       .catch((error) => {
         dispatch(twitterLoginFail(error.message));
-        Swal.fire("Error", `${error.message}`, "error");
+        if (error.message !== "Firebase: Error (auth/popup-closed-by-user).") {
+          Swal.fire("Error", `${error.message}`, "error");
+        }
         console.log(error, "err msg");
       });
   };
@@ -403,7 +407,9 @@ export const facebookLoginInitiate = () => {
       })
       .catch((error) => {
         dispatch(facebookLoginFail(error.message));
-        Swal.fire("Error", `${error.message}`, "error");
+        if (error.message !== "Firebase: Error (auth/popup-closed-by-user).") {
+          Swal.fire("Error", `${error.message}`, "error");
+        }
         console.log(error.message, "err msg");
       });
   };
@@ -419,7 +425,9 @@ export const appleLoginInitiate = () => {
       })
       .catch((error) => {
         dispatch(appleLoginFail(error.message));
-        Swal.fire("Error", `${error.message}`, "error");
+        if (error.message !== "Firebase: Error (auth/popup-closed-by-user).") {
+          Swal.fire("Error", `${error.message}`, "error");
+        }
         console.log(error.message, "err msg");
       });
   };

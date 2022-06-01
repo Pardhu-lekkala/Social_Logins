@@ -8,6 +8,7 @@ import AppleIcon from "../../../Assets/True.png";
 import messageBox from "../../../Assets/messageBox.png";
 import topEllipse from "../../../Assets/topEllipse.png";
 import bottomEllipse from "../../../Assets/bottomEllipse.png";
+import correctIcon from "../../../Assets/correctIcon.png";
 import brandLogo from "../../../Assets/logo.png";
 import logo from "../../../Assets/recta.png";
 import { useNavigate } from "react-router";
@@ -104,7 +105,7 @@ const Login = () => {
       <div className="sign-up-cont">
         <div className="sign-logo-cont">
           <div className="top-logo-cont">
-            <img src={brandLogo} />
+            <img src={brandLogo} style={{ height: 100, width: 100 }} />
           </div>
           <div className="top-header-cont">
             <img src={logo} />
@@ -137,6 +138,7 @@ const Login = () => {
             >
               Password
             </label>
+
             <input
               type="password"
               autocomplete="new-password"
@@ -145,11 +147,15 @@ const Login = () => {
               onChange={(e) => setState({ ...state, password: e.target.value })}
               required
             />
+
+            <span className="label-type pass-cont" onClick={navigateToForgot}>
+              Forgot Password
+            </span>
           </div>
-          <div className="pass-cont" onClick={navigateToForgot}>
-            <p className="label-type">Forgot Password</p>
-          </div>
-          <div>
+          {/* <div className="pass-cont" onClick={navigateToForgot}> */}
+
+          {/* </div> */}
+          <div style={{ marginRight: "2%", marginLeft: "5%" }}>
             <button className="sign-button" onClick={loginWithEmailAndPassword}>
               {loading === false ? (
                 "Login"
@@ -196,6 +202,11 @@ const Login = () => {
               {APPLICATION_CONSTANTS.ERROR_EMAIL_STRING}
             </p>
           )}
+          {email === "" && password !== "" && buttonClick === true && (
+            <p className="error-message-text">
+              {APPLICATION_CONSTANTS.ERROR_EMAIL_STRING}
+            </p>
+          )}
           {password === "" && email !== "" && buttonClick === true && (
             <p className="error-message-text">
               {APPLICATION_CONSTANTS.ERROR_PASSWORD_STRING}
@@ -208,9 +219,9 @@ const Login = () => {
               justifyContent: "flex-start",
             }}
           >
-            <hr style={{ width: "40%", height: "1px", marginTop: "4%" }} />
+            <hr style={{ width: "32%", height: "1px", marginTop: "4%" }} />
             <span className="span-or">or</span>
-            <hr style={{ width: "40%", height: "1px", marginTop: "4%" }} />
+            <hr style={{ width: "32%", height: "1px", marginTop: "4%" }} />
           </div>
           <div className="social-buttons" style={{ marginTop: "15px" }}>
             {process.env.React_App_Google_Login === "true" && (
