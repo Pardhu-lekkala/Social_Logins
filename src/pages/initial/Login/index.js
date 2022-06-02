@@ -119,7 +119,7 @@ const Login = () => {
               className="label-type"
               style={{ marginTop: "10%" }}
             >
-              Email address
+              Email Address
             </label>
             <input
               type="text"
